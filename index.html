@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Gestión de Proyectos</title>
+  <style>
+    /* ==========================================================================
+       ESTILOS GENERALES Y LAYOUT
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Barra lateral de navegación (Sidebar) */
+    .sidebar {
+      width: 240px;
+      background-color: #1a252f;
+      color: #fff;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #34495e;
+      padding-bottom: 10px;
+      color: #ecf0f1;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin-bottom: 12px;
+    }
+
+    .sidebar a {
+      color: #bdc3c7;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+      color: #fff;
+    }
+
+    /* Área principal de contenido */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    header {
+      margin-bottom: 25px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      color: #2c3e50;
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      color: #7f8c8d;
+    }
+
+    /* Tarjetas y Contenedores */
+    .section-card {
+      background-color: #fff;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .section-card h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+    }
+
+    /* Grid para las Herramientas y Técnicas */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .grid-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 15px;
+      background-color: #fafafa;
+    }
+
+    .grid-card h3 {
+      color: #2980b9;
+      margin-bottom: 8px;
+    }
+
+    .grid-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Estilos para Glosario / Definiciones */
+    .glossary-item {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #ddd;
+    }
+
+    .glossary-item:last-child {
+      border-bottom: none;
+    }
+
+    .glossary-term {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    /* Badges o Etiquetas sencillas */
+    .tag {
+      display: inline-block;
+      background-color: #e8f4f8;
+      color: #2980b9;
+      font-size: 0.8rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN LATERAL -->
+  <nav class="sidebar">
+    <h2>GP Dashboard</h2>
+    <ul>
+      <li><a href="#definiciones">1. Definiciones</a></li>
+      <li><a href="#herramientas">2. Herramientas</a></li>
+      <li><a href="#tecnicas">3. Técnicas y Marcos</a></li>
+      <li><a href="#recursos">4. Mis Recursos / Talleres</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    
+    <header>
+      <h1>Dashboard del Estudiante: Gestión de Proyectos</h1>
+      <p>Espacio de consulta de conceptos, herramientas y técnicas de la asignatura.</p>
+    </header>
+
+    <!-- SECCIÓN 1: DEFINICIONES -->
+    <section id="definiciones" class="section-card">
+      <h2>1. Definiciones Fundamentales</h2>
+      
+      <div class="glossary-item">
+        <p class="glossary-term">Proyecto</p>
+        <p>Esfuerzo temporal emprendido para crear un producto, servicio o resultado único.</p>
+      </div>
+
+      <div class="glossary-item">
+        <p class="glossary-term">Interesados (Stakeholders)</p>
+        <p>Individuos u organizaciones que participan activamente en el proyecto o cuyos intereses pueden verse afectados por la ejecución o finalización del mismo[cite: 2].</p>
+      </div>
+
+      <div class="glossary-item">
+        <p class="glossary-term">Línea Base del Alcance</p>
+        <p>Versión aprobada del enunciado del alcance, la Estructura de Desglose del Trabajo (EDT/WBS) y el diccionario de la EDT.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: HERRAMIENTAS -->
+    <section id="herramientas" class="section-card">
+      <h2>2. Herramientas de Gestión</h2>
+      <p>Herramientas de software e instrumentos clave para el control de proyectos.</p>
+      
+      <div class="grid-container">
+        
+        <div class="grid-card">
+          <h3>Matriz de Poder e Interés</h3>
+          <p>Herramienta visual para clasificar a los involucrados según su nivel de autoridad e interés en el proyecto[cite: 1, 2].</p>
+          <span class="tag">Gestión de Involucrados</span>
+        </div>
+
+        <div class="grid-card">
+          <h3>Estructura de Desglose del Trabajo (EDT)</h3>
+          <p>Descomposición jerárquica orientada al entregable del trabajo que será ejecutado por el equipo.</p>
+          <span class="tag">Alcance</span>
+        </div>
+
+        <div class="grid-card">
+          <h3>Diagrama de Gantt</h3>
+          <p>Herramienta gráfica que muestra la dedicación de tiempo prevista para diferentes tareas a lo largo del tiempo.</p>
+          <span class="tag">Cronograma</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: TÉCNICAS Y METODOLOGÍAS -->
+    <section id="tecnicas" class="section-card">
+      <h2>3. Técnicas y Marcos de Trabajo</h2>
+      
+      <div class="grid-container">
+        
+        <div class="grid-card">
+          <h3>Metodología del Marco Lógico (MML)</h3>
+          <p>Enfoque estructurado para la concepción, diseño, ejecución y evaluación mediante el Análisis de Problemas, Objetivos y Matriz 4x4[cite: 2, 3].</p>
+          <span class="tag">Planificación Estratégica</span>
+        </div>
+
+        <div class="grid-card">
+          <h3>Scrum</h3>
+          <p>Marco de trabajo ágil iterativo e incremental para la gestión del desarrollo de productos[cite: 4].</p>
+          <span class="tag">Enfoque Ágil</span>
+        </div>
+
+        <div class="grid-card">
+          <h3>Análisis de Ruta Crítica (CPM)</h3>
+          <p>Algoritmo basado en modelos para programar un conjunto de actividades del proyecto.</p>
+          <span class="tag">Tiempo y Programación</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: ESPACIO PARA MODIFICACIONES DE CLASE -->
+    <section id="recursos" class="section-card">
+      <h2>4. Mis Recursos y Notas de Clase</h2>
+      <p>Espacio libre para que los estudiantes agreguen sus propios apuntes o enlaces en cada sesión.</p>
+      
+      <div class="glossary-item" style="margin-top: 15px;">
+        <p class="glossary-term">Clase 1: Introducción</p>
+        <p>Notas sobre el ciclo de vida del proyecto y la selección de metodologías tradicionales vs. ágiles[cite: 2, 4].</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
